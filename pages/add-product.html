@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HarvestLink | Add Product</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-wrap">
+      <div class="logo-area">
+        <img src="../assets/images/logo.png" alt="HarvestLink Logo" />
+        <div class="logo-text">
+          <h1>HarvestLink</h1>
+          <p>Add Surplus Product</p>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="farmer-home.html">Farmer Home</a>
+        <a href="login.html">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h2>Add Surplus Product</h2>
+      <p>Create a new listing with the required product details.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="form-wrap">
+      <h3>New Product Listing</h3>
+      <p class="subtext">Provide clear and accurate information for charities to review.</p>
+
+      <form>
+        <div class="form-group">
+          <label for="crop-type">Crop Type</label>
+          <input id="crop-type" type="text" placeholder="e.g. Tomatoes, Dates" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input id="quantity" type="number" placeholder="e.g. 120" />
+          </div>
+
+          <div class="form-group">
+            <label for="condition">Product Condition</label>
+            <select id="condition">
+              <option selected disabled>Select condition</option>
+              <option>Fresh</option>
+              <option>Near Expiry</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="expiry">Expiration Date</label>
+          <input id="expiry" type="date" />
+        </div>
+
+        <div class="form-group">
+          <label for="product-image">Product Image</label>
+          <input id="product-image" type="file" />
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Post Product</button>
+          <a href="farmer-home.html" class="btn btn-outline">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-wrap">
+      <p>HarvestLink Web Platform</p>
+      <p>IT320 Practical Software Engineering — <span class="current-year"></span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

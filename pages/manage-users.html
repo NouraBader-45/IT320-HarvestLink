@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HarvestLink | Manage Users</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-wrap">
+      <div class="logo-area">
+        <img src="../assets/images/logo.png" alt="HarvestLink Logo" />
+        <div class="logo-text">
+          <h1>HarvestLink</h1>
+          <p>Manage Users</p>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="admin-home.html">Admin Home</a>
+        <a href="login.html">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h2>Manage User Accounts</h2>
+      <p>Review and block inappropriate farmer or charity accounts when necessary.</p>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ahmed Saleh</td>
+            <td>Farmer</td>
+            <td>ahmed@example.com</td>
+            <td><span class="status approved">Active</span></td>
+            <td><a href="#" class="btn btn-danger">Block User</a></td>
+          </tr>
+          <tr>
+            <td>Mercy Organization</td>
+            <td>Charity</td>
+            <td>mercy@example.com</td>
+            <td><span class="status blocked">Blocked</span></td>
+            <td><a href="#" class="btn btn-outline">Unblock User</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-wrap">
+      <p>HarvestLink Web Platform</p>
+      <p>IT320 Practical Software Engineering — <span class="current-year"></span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HarvestLink | Manage Profile</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-wrap">
+      <div class="logo-area">
+        <img src="../assets/images/logo.png" alt="HarvestLink Logo" />
+        <div class="logo-text">
+          <h1>HarvestLink</h1>
+          <p>Manage Profile</p>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="login.html">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h2>Manage Profile</h2>
+      <p>Update your personal information and profile image.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="form-wrap">
+      <h3>Profile Information</h3>
+      <p class="subtext">Keep your account information accurate and up to date.</p>
+
+      <form>
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input id="full-name" type="text" placeholder="Enter full name" />
+        </div>
+
+        <div class="form-group">
+          <label for="profile-email">Email Address</label>
+          <input id="profile-email" type="email" placeholder="Enter email address" />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Contact Number</label>
+          <input id="phone" type="text" placeholder="Enter contact number" />
+        </div>
+
+        <div class="form-group">
+          <label for="image">Profile Image</label>
+          <input id="image" type="file" />
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+          <a href="farmer-home.html" class="btn btn-outline">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-wrap">
+      <p>HarvestLink Web Platform</p>
+      <p>IT320 Practical Software Engineering — <span class="current-year"></span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HarvestLink | Browse Products</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-wrap">
+      <div class="logo-area">
+        <img src="../assets/images/logo.png" alt="HarvestLink Logo" />
+        <div class="logo-text">
+          <h1>HarvestLink</h1>
+          <p>Browse Products</p>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="charity-home.html">Charity Home</a>
+        <a href="my-requests.html">My Requests</a>
+        <a href="login.html">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h2>Browse Available Products</h2>
+      <p>Search and review agricultural surplus listings.</p>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="panel" style="margin-bottom: 24px;">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="search-name">Search by Product Name</label>
+          <input id="search-name" type="text" placeholder="e.g. Tomatoes" />
+        </div>
+        <div class="form-group">
+          <label for="search-category">Search by Category</label>
+          <select id="search-category">
+            <option selected>All Categories</option>
+            <option>Vegetables</option>
+            <option>Fruits</option>
+            <option>Dates</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-primary">Search</button>
+      </div>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="image-box"><img src="../assets/images/logo.png" alt="Product" /></div>
+        <div class="content">
+          <h4>Fresh Tomatoes</h4>
+          <p>Suitable for quick donation coordination and immediate review.</p>
+          <div class="meta">
+            <span><strong>Farmer:</strong> Ahmed Farm</span>
+            <span><strong>Quantity:</strong> 80 Boxes</span>
+            <span><strong>Condition:</strong> Fresh</span>
+          </div>
+          <div class="action-row">
+            <a href="product-details.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="image-box"><img src="../assets/images/logo.png" alt="Product" /></div>
+        <div class="content">
+          <h4>Dates</h4>
+          <p>Seasonal agricultural surplus available for charity requests.</p>
+          <div class="meta">
+            <span><strong>Farmer:</strong> Al Waha Farm</span>
+            <span><strong>Quantity:</strong> 50 Boxes</span>
+            <span><strong>Condition:</strong> Fresh</span>
+          </div>
+          <div class="action-row">
+            <a href="product-details.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-wrap">
+      <p>HarvestLink Web Platform</p>
+      <p>IT320 Practical Software Engineering — <span class="current-year"></span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HarvestLink | Incoming Requests</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-wrap">
+      <div class="logo-area">
+        <img src="../assets/images/logo.png" alt="HarvestLink Logo" />
+        <div class="logo-text">
+          <h1>HarvestLink</h1>
+          <p>Incoming Requests</p>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="farmer-home.html">Farmer Home</a>
+        <a href="login.html">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h2>Incoming Donation Requests</h2>
+      <p>Review requests submitted by charitable organizations.</p>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Charity Name</th>
+            <th>Requested Quantity</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fresh Tomatoes</td>
+            <td>Mercy Organization</td>
+            <td>20 Boxes</td>
+            <td><span class="status pending">Pending</span></td>
+            <td>
+              <div class="action-row">
+                <a href="#" class="btn btn-success">Approve</a>
+                <a href="#" class="btn btn-danger">Reject</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Dates</td>
+            <td>Al Noor Charity</td>
+            <td>15 Boxes</td>
+            <td><span class="status approved">Approved</span></td>
+            <td>View only</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-wrap">
+      <p>HarvestLink Web Platform</p>
+      <p>IT320 Practical Software Engineering — <span class="current-year"></span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

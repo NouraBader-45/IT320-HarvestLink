@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HarvestLink | Admin Home</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-wrap">
+      <div class="logo-area">
+        <img src="../assets/images/logo.png" alt="HarvestLink Logo" />
+        <div class="logo-text">
+          <h1>HarvestLink</h1>
+          <p>Administrator Area</p>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="active" href="admin-home.html">Admin Home</a>
+        <a href="login.html">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container panel-grid">
+    <aside class="sidebar">
+      <h4>Admin Menu</h4>
+      <a class="active" href="admin-home.html">Home</a>
+      <a href="manage-users.html">Manage Users</a>
+      <a href="manage-listings.html">Manage Listings</a>
+      <a href="login.html">Logout</a>
+    </aside>
+
+    <div>
+      <div class="banner">
+        <h3>Welcome, Administrator</h3>
+        <p>Monitor system activity and maintain platform integrity.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>Total Users</h4>
+          <strong>124</strong>
+        </div>
+        <div class="stat-card">
+          <h4>Total Listings</h4>
+          <strong>58</strong>
+        </div>
+        <div class="stat-card">
+          <h4>Total Requests</h4>
+          <strong>91</strong>
+        </div>
+      </div>
+
+      <div class="simple-grid">
+        <div class="card">
+          <h4>Manage Users</h4>
+          <p>Review user accounts and block inappropriate farmer or charity accounts when required.</p>
+          <div class="form-actions">
+            <a class="btn btn-primary" href="manage-users.html">Open Users</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Manage Listings</h4>
+          <p>Browse product listings and block inappropriate surplus products to maintain system reliability.</p>
+          <div class="form-actions">
+            <a class="btn btn-outline" href="manage-listings.html">Open Listings</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-wrap">
+      <p>HarvestLink Web Platform</p>
+      <p>IT320 Practical Software Engineering — <span class="current-year"></span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HarvestLink | Product Details</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-wrap">
+      <div class="logo-area">
+        <img src="../assets/images/logo.png" alt="HarvestLink Logo" />
+        <div class="logo-text">
+          <h1>HarvestLink</h1>
+          <p>Product Details</p>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="browse-products.html">Browse Products</a>
+        <a href="my-requests.html">My Requests</a>
+        <a href="login.html">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container section">
+    <div class="detail-card">
+      <div class="detail-visual">
+        <img src="../assets/images/logo.png" alt="Product Image" />
+      </div>
+
+      <div class="detail-info">
+        <span class="role-badge">Available Listing</span>
+        <h3>Fresh Tomatoes</h3>
+        <p>This listing provides detailed information for charitable organizations before request submission.</p>
+
+        <div class="detail-list">
+          <div><strong>Farmer Name:</strong> Ahmed Farm</div>
+          <div><strong>Quantity Available:</strong> 80 Boxes</div>
+          <div><strong>Expiration Date:</strong> 2026-06-18</div>
+          <div><strong>Product Condition:</strong> Fresh</div>
+        </div>
+
+        <div class="note-box">
+          The “Request” button is clearly visible here to support donation request initiation.
+        </div>
+
+        <div class="form-actions">
+          <a href="#request-form" class="btn btn-primary">Request</a>
+          <a href="browse-products.html" class="btn btn-outline">Back</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section" id="request-form">
+    <div class="form-wrap">
+      <h3>Submit Donation Request</h3>
+      <p class="subtext">Enter the requested quantity to submit your request.</p>
+
+      <form>
+        <div class="form-group">
+          <label for="requested-quantity">Requested Quantity</label>
+          <input id="requested-quantity" type="number" placeholder="Enter quantity" />
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Submit Request</button>
+          <a href="my-requests.html" class="btn btn-outline">Go to My Requests</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-wrap">
+      <p>HarvestLink Web Platform</p>
+      <p>IT320 Practical Software Engineering — <span class="current-year"></span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
