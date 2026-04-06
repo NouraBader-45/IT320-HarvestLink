@@ -1,18 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const yearSpans = document.querySelectorAll(".current-year");
   const year = new Date().getFullYear();
-  yearSpans.forEach((span) => (span.textContent = year));
+  yearSpans.forEach((span) => {
+    span.textContent = year;
+  });
 
   const toggles = document.querySelectorAll(".hamburger-btn");
-
   toggles.forEach((toggle) => {
     toggle.addEventListener("click", (e) => {
       e.stopPropagation();
+
       const targetId = toggle.getAttribute("data-target");
       const menu = document.getElementById(targetId);
 
       document.querySelectorAll(".dropdown-menu").forEach((dropdown) => {
-        if (dropdown !== menu) dropdown.classList.remove("show");
+        if (dropdown !== menu) {
+          dropdown.classList.remove("show");
+        }
       });
 
       if (menu) {
@@ -29,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   createToastContainer();
 
-  // لاحظي: شلنا login-form من هنا لأن صفحة اللوجين لها منطق تحويل خاص
+  bindLoginRedirect();
   bindFormToast("register-form", "Account created successfully.");
   bindFormToast("profile-form", "Profile updated successfully.");
   bindFormToast("add-product-form", "Product added successfully.");
@@ -78,6 +82,32 @@ function showToast(message, type = "success") {
   }, 2600);
 }
 
+function bindLoginRedirect() {
+  const loginForm = document.getElementById("login-form");
+  const roleSelect = document.getElementById("login-role");
+
+  if (!loginForm || !roleSelect) return;
+
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const role = roleSelect.value;
+    if (!role) return;
+
+    showToast("Login successful.", "success");
+
+    setTimeout(() => {
+      if (role === "farmer") {
+        window.location.href = "farmer-home.html";
+      } else if (role === "charity") {
+        window.location.href = "charity-home.html";
+      } else if (role === "admin") {
+        window.location.href = "admin-home.html";
+      }
+    }, 450);
+  });
+}
+
 function bindFormToast(formId, message, isSearchForm = false) {
   const form = document.getElementById(formId);
   if (!form) return;
@@ -111,7 +141,7 @@ function bindActionMessages() {
     { selector: ".unblock-user-btn", message: "User unblocked successfully.", type: "success" },
     { selector: ".block-product-btn", message: "Product blocked successfully.", type: "warning" },
     { selector: ".unblock-product-btn", message: "Product unblocked successfully.", type: "success" },
-    { selector: ".logout-btn", message: "Logged out successfully.", type: "success" }
+    { selector: ".logout-btn", message: "Logged out successfully.", type: "success", redirect: "login.html" }
   ];
 
   actionMap.forEach((item) => {
@@ -121,6 +151,12 @@ function bindActionMessages() {
       element.addEventListener("click", (e) => {
         e.preventDefault();
         showToast(item.message, item.type);
+
+        if (item.redirect) {
+          setTimeout(() => {
+            window.location.href = item.redirect;
+          }, 450);
+        }
       });
     });
   });
