@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   createToastContainer();
 
-  bindFormToast("login-form", "Login successful.");
+  // لاحظي: شلنا login-form من هنا لأن صفحة اللوجين لها منطق تحويل خاص
   bindFormToast("register-form", "Account created successfully.");
   bindFormToast("profile-form", "Profile updated successfully.");
   bindFormToast("add-product-form", "Product added successfully.");
