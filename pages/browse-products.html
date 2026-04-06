@@ -17,11 +17,26 @@
         </div>
       </div>
 
-      <nav class="nav-links">
-        <a href="charity-home.html">Charity Home</a>
-        <a href="my-requests.html">My Requests</a>
-        <a href="login.html">Logout</a>
-      </nav>
+      <div class="header-utilities">
+        <a href="manage-profile.html" class="profile-link" title="Profile">
+          <img src="../assets/images/logo.png" alt="Profile" />
+        </a>
+
+        <div class="menu-wrap">
+          <button class="hamburger-btn" data-target="browseProductsMenu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="dropdown-menu" id="browseProductsMenu">
+            <a href="charity-home.html">Home</a>
+            <a href="manage-profile.html">Edit Profile</a>
+            <a href="my-requests.html">My Requests</a>
+            <a href="login.html" class="logout-btn">Logout</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -33,7 +48,7 @@
   </section>
 
   <section class="container section">
-    <div class="panel" style="margin-bottom: 24px;">
+    <form id="search-form" class="panel" style="margin-bottom: 24px;">
       <div class="form-row">
         <div class="form-group">
           <label for="search-name">Search by Product Name</label>
@@ -50,9 +65,9 @@
         </div>
       </div>
       <div class="form-actions">
-        <button class="btn btn-primary">Search</button>
+        <button type="submit" class="btn btn-primary">Search</button>
       </div>
-    </div>
+    </form>
 
     <div class="product-grid">
       <div class="product-card">

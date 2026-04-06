@@ -17,10 +17,26 @@
         </div>
       </div>
 
-      <nav class="nav-links">
-        <a href="admin-home.html">Admin Home</a>
-        <a href="login.html">Logout</a>
-      </nav>
+      <div class="header-utilities">
+        <a href="manage-profile.html" class="profile-link" title="Profile">
+          <img src="../assets/images/logo.png" alt="Profile" />
+        </a>
+
+        <div class="menu-wrap">
+          <button class="hamburger-btn" data-target="manageListingsMenu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="dropdown-menu" id="manageListingsMenu">
+            <a href="admin-home.html">Home</a>
+            <a href="manage-profile.html">Edit Profile</a>
+            <a href="manage-users.html">Manage Users</a>
+            <a href="login.html" class="logout-btn">Logout</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -43,7 +59,7 @@
             <span><strong>Farmer:</strong> Ahmed Farm</span>
           </div>
           <div class="action-row">
-            <a href="#" class="btn btn-danger">Block Product</a>
+            <a href="#" class="btn btn-danger block-product-btn">Block Product</a>
           </div>
         </div>
       </div>
@@ -58,7 +74,7 @@
             <span><strong>Farmer:</strong> Al Waha Farm</span>
           </div>
           <div class="action-row">
-            <a href="#" class="btn btn-outline">Unblock Product</a>
+            <a href="#" class="btn btn-outline unblock-product-btn">Unblock Product</a>
           </div>
         </div>
       </div>

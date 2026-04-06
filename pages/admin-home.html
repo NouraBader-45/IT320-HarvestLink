@@ -6,7 +6,7 @@
   <title>HarvestLink | Admin Home</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
+<body class="admin-theme">
   <header class="main-header">
     <div class="container header-wrap">
       <div class="logo-area">
@@ -17,63 +17,93 @@
         </div>
       </div>
 
-      <nav class="nav-links">
-        <a href="../index.html">Home</a>
-        <a class="active" href="admin-home.html">Admin Home</a>
-        <a href="login.html">Logout</a>
-      </nav>
+      <div class="header-utilities">
+        <a href="manage-profile.html" class="profile-link" title="Profile">
+          <img src="../assets/images/logo.png" alt="Profile" />
+        </a>
+
+        <div class="menu-wrap">
+          <button class="hamburger-btn" data-target="adminMenu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="dropdown-menu" id="adminMenu">
+            <a href="admin-home.html">Home</a>
+            <a href="manage-profile.html">Edit Profile</a>
+            <a href="manage-users.html">Manage Users</a>
+            <a href="manage-listings.html">Manage Listings</a>
+            <a href="login.html" class="logout-btn">Logout</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <section class="container panel-grid">
-    <aside class="sidebar">
-      <h4>Admin Menu</h4>
-      <a class="active" href="admin-home.html">Home</a>
-      <a href="manage-users.html">Manage Users</a>
-      <a href="manage-listings.html">Manage Listings</a>
-      <a href="login.html">Logout</a>
-    </aside>
+  <main class="page-shell">
+    <div class="container">
+      <div class="role-top">
+        <div class="role-intro">
+          <span class="role-bubble">Admin Home</span>
+          <h2>Monitor platform activity and protect system integrity.</h2>
+          <p>
+            This page gives administrators a focused interface for the most important management functions
+            without repetition or clutter.
+          </p>
+        </div>
+      </div>
 
-    <div>
-      <div class="banner">
+      <div class="role-highlight">
         <h3>Welcome, Administrator</h3>
-        <p>Monitor system activity and maintain platform integrity.</p>
+        <p>
+          HarvestLink gives the admin role a clear view of essential management functions
+          to help maintain a reliable and organized platform.
+        </p>
       </div>
 
-      <div class="stats-grid">
-        <div class="stat-card">
-          <h4>Total Users</h4>
-          <strong>124</strong>
-        </div>
-        <div class="stat-card">
-          <h4>Total Listings</h4>
-          <strong>58</strong>
-        </div>
-        <div class="stat-card">
-          <h4>Total Requests</h4>
-          <strong>91</strong>
-        </div>
-      </div>
-
-      <div class="simple-grid">
-        <div class="card">
-          <h4>Manage Users</h4>
-          <p>Review user accounts and block inappropriate farmer or charity accounts when required.</p>
-          <div class="form-actions">
-            <a class="btn btn-primary" href="manage-users.html">Open Users</a>
+      <section class="cards-section">
+        <div class="feature-card">
+          <div class="feature-tag">Users</div>
+          <div class="feature-icon">U</div>
+          <h3>Manage Users</h3>
+          <p>
+            Review farmer and charity accounts and block inappropriate accounts
+            when moderation is required.
+          </p>
+          <div class="card-actions">
+            <a href="manage-users.html" class="btn btn-primary">Manage Users</a>
           </div>
         </div>
 
-        <div class="card">
-          <h4>Manage Listings</h4>
-          <p>Browse product listings and block inappropriate surplus products to maintain system reliability.</p>
-          <div class="form-actions">
-            <a class="btn btn-outline" href="manage-listings.html">Open Listings</a>
+        <div class="feature-card">
+          <div class="feature-tag">Listings</div>
+          <div class="feature-icon">L</div>
+          <h3>Manage Listings</h3>
+          <p>
+            Review surplus product listings and block unsuitable listings
+            to keep the platform reliable and organized.
+          </p>
+          <div class="card-actions">
+            <a href="manage-listings.html" class="btn btn-primary">Manage Listings</a>
           </div>
         </div>
-      </div>
+
+        <div class="feature-card">
+          <div class="feature-tag">Overview</div>
+          <div class="feature-icon">#</div>
+          <h3>View Platform Overview</h3>
+          <p>
+            Access a simple summary of users, listings, and requests
+            to support general monitoring of the system.
+          </p>
+          <div class="card-actions">
+            <a href="manage-users.html" class="btn btn-outline">Open Overview</a>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
+  </main>
 
   <footer class="main-footer">
     <div class="container footer-wrap">

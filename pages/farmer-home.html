@@ -3,80 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HarvestLink | Farmer Home</title>
+  <title>HarvestLink | Charity Home</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
+<body class="charity-theme">
   <header class="main-header">
     <div class="container header-wrap">
       <div class="logo-area">
         <img src="../assets/images/logo.png" alt="HarvestLink Logo" />
         <div class="logo-text">
           <h1>HarvestLink</h1>
-          <p>Farmer Area</p>
+          <p>Charity Area</p>
         </div>
       </div>
 
-      <nav class="nav-links">
-        <a href="../index.html">Home</a>
-        <a class="active" href="farmer-home.html">Farmer Home</a>
-        <a href="login.html">Logout</a>
-      </nav>
+      <div class="header-utilities">
+        <a href="manage-profile.html" class="profile-link" title="Profile">
+          <img src="../assets/images/logo.png" alt="Profile" />
+        </a>
+
+        <div class="menu-wrap">
+          <button class="hamburger-btn" data-target="charityMenu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="dropdown-menu" id="charityMenu">
+            <a href="charity-home.html">Home</a>
+            <a href="manage-profile.html">Edit Profile</a>
+            <a href="browse-products.html">Browse Products</a>
+            <a href="my-requests.html">My Requests</a>
+            <a href="login.html" class="logout-btn">Logout</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <section class="container panel-grid">
-    <aside class="sidebar">
-      <h4>Farmer Menu</h4>
-      <a class="active" href="farmer-home.html">Home</a>
-      <a href="manage-profile.html">Manage Profile</a>
-      <a href="add-product.html">Add Product</a>
-      <a href="my-products.html">My Products</a>
-      <a href="incoming-requests.html">Incoming Requests</a>
-      <a href="login.html">Logout</a>
-    </aside>
-
-    <div>
-      <div class="banner">
-        <h3>Welcome, Farmer</h3>
-        <p>Manage your surplus products and respond to incoming donation requests.</p>
-      </div>
-
-      <div class="simple-grid">
-        <div class="card">
-          <h4>Post New Product</h4>
-          <p>Add a new agricultural surplus listing with the required details for charities to browse.</p>
-          <div class="form-actions">
-            <a class="btn btn-primary" href="add-product.html">Add Product</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h4>Review Requests</h4>
-          <p>View incoming requests and respond to them through approval or rejection.</p>
-          <div class="form-actions">
-            <a class="btn btn-outline" href="incoming-requests.html">Manage Requests</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h4>Manage Listings</h4>
-          <p>Edit or delete previously posted products when details change or products become unavailable.</p>
-          <div class="form-actions">
-            <a class="btn btn-outline" href="my-products.html">Open My Products</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h4>Profile Information</h4>
-          <p>Keep your account details and contact information updated for clear coordination.</p>
-          <div class="form-actions">
-            <a class="btn btn-outline" href="manage-profile.html">Manage Profile</a>
-          </div>
+  <main class="page-shell">
+    <div class="container">
+      <div class="role-top">
+        <div class="role-intro">
+          <span class="role-bubble">Charity Home</span>
+          <h2>Find available products and request them with ease.</h2>
+          <p>
+            This page gives charitable organizations direct access to browsing available surplus,
+            viewing details, submitting requests, and tracking request outcomes.
+          </p>
         </div>
       </div>
+
+      <div class="role-highlight">
+        <h3>Welcome, Charity Representative</h3>
+        <p>
+          HarvestLink helps your organization discover relevant agricultural surplus quickly
+          and move through a clean request and tracking process.
+        </p>
+      </div>
+
+      <section class="cards-section">
+        <div class="feature-card">
+          <div class="feature-tag">Search & View</div>
+          <div class="feature-icon">⌕</div>
+          <h3>Browse Products</h3>
+          <p>
+            Search and review available product listings to identify suitable items
+            based on your organization’s needs.
+          </p>
+          <div class="card-actions">
+            <a href="browse-products.html" class="btn btn-primary">Browse Now</a>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-tag">Details</div>
+          <div class="feature-icon">i</div>
+          <h3>View Product Details</h3>
+          <p>
+            Open detailed product information, including farmer name, quantity,
+            condition, and expiration date before submitting a request.
+          </p>
+          <div class="card-actions">
+            <a href="product-details.html" class="btn btn-outline">Open Details</a>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-tag">Tracking</div>
+          <div class="feature-icon">↗</div>
+          <h3>My Requests</h3>
+          <p>
+            Review all previously submitted requests and track whether each one
+            is pending, approved, or rejected.
+          </p>
+          <div class="card-actions">
+            <a href="my-requests.html" class="btn btn-primary">Track Requests</a>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
+  </main>
 
   <footer class="main-footer">
     <div class="container footer-wrap">

@@ -17,10 +17,26 @@
         </div>
       </div>
 
-      <nav class="nav-links">
-        <a href="admin-home.html">Admin Home</a>
-        <a href="login.html">Logout</a>
-      </nav>
+      <div class="header-utilities">
+        <a href="manage-profile.html" class="profile-link" title="Profile">
+          <img src="../assets/images/logo.png" alt="Profile" />
+        </a>
+
+        <div class="menu-wrap">
+          <button class="hamburger-btn" data-target="manageUsersMenu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="dropdown-menu" id="manageUsersMenu">
+            <a href="admin-home.html">Home</a>
+            <a href="manage-profile.html">Edit Profile</a>
+            <a href="manage-listings.html">Manage Listings</a>
+            <a href="login.html" class="logout-btn">Logout</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -48,15 +64,15 @@
             <td>Ahmed Saleh</td>
             <td>Farmer</td>
             <td>ahmed@example.com</td>
-            <td><span class="status approved">Active</span></td>
-            <td><a href="#" class="btn btn-danger">Block User</a></td>
+            <td><span class="status active">Active</span></td>
+            <td><a href="#" class="btn btn-danger block-user-btn">Block User</a></td>
           </tr>
           <tr>
             <td>Mercy Organization</td>
             <td>Charity</td>
             <td>mercy@example.com</td>
             <td><span class="status blocked">Blocked</span></td>
-            <td><a href="#" class="btn btn-outline">Unblock User</a></td>
+            <td><a href="#" class="btn btn-outline unblock-user-btn">Unblock User</a></td>
           </tr>
         </tbody>
       </table>

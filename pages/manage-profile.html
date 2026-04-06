@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HarvestLink | Manage Profile</title>
+  <title>HarvestLink | Add Product</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -13,52 +13,80 @@
         <img src="../assets/images/logo.png" alt="HarvestLink Logo" />
         <div class="logo-text">
           <h1>HarvestLink</h1>
-          <p>Manage Profile</p>
+          <p>Add Surplus Product</p>
         </div>
       </div>
 
-      <nav class="nav-links">
-        <a href="../index.html">Home</a>
-        <a href="login.html">Logout</a>
-      </nav>
+      <div class="header-utilities">
+        <a href="manage-profile.html" class="profile-link" title="Profile">
+          <img src="../assets/images/logo.png" alt="Profile" />
+        </a>
+
+        <div class="menu-wrap">
+          <button class="hamburger-btn" data-target="addProductMenu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="dropdown-menu" id="addProductMenu">
+            <a href="farmer-home.html">Home</a>
+            <a href="manage-profile.html">Edit Profile</a>
+            <a href="my-products.html">My Products</a>
+            <a href="incoming-requests.html">Incoming Requests</a>
+            <a href="login.html" class="logout-btn">Logout</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <section class="page-hero">
     <div class="container">
-      <h2>Manage Profile</h2>
-      <p>Update your personal information and profile image.</p>
+      <h2>Add Surplus Product</h2>
+      <p>Create a new listing with the required product details.</p>
     </div>
   </section>
 
   <section>
     <div class="form-wrap">
-      <h3>Profile Information</h3>
-      <p class="subtext">Keep your account information accurate and up to date.</p>
+      <h3>New Product Listing</h3>
+      <p class="subtext">Provide clear and accurate information for charities to review.</p>
 
-      <form>
+      <form id="add-product-form">
         <div class="form-group">
-          <label for="full-name">Full Name</label>
-          <input id="full-name" type="text" placeholder="Enter full name" />
+          <label for="crop-type">Crop Type</label>
+          <input id="crop-type" type="text" placeholder="e.g. Tomatoes, Dates" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input id="quantity" type="number" placeholder="e.g. 120" />
+          </div>
+
+          <div class="form-group">
+            <label for="condition">Product Condition</label>
+            <select id="condition">
+              <option selected disabled>Select condition</option>
+              <option>Fresh</option>
+              <option>Near Expiry</option>
+            </select>
+          </div>
         </div>
 
         <div class="form-group">
-          <label for="profile-email">Email Address</label>
-          <input id="profile-email" type="email" placeholder="Enter email address" />
+          <label for="expiry">Expiration Date</label>
+          <input id="expiry" type="date" />
         </div>
 
         <div class="form-group">
-          <label for="phone">Contact Number</label>
-          <input id="phone" type="text" placeholder="Enter contact number" />
-        </div>
-
-        <div class="form-group">
-          <label for="image">Profile Image</label>
-          <input id="image" type="file" />
+          <label for="product-image">Product Image</label>
+          <input id="product-image" type="file" />
         </div>
 
         <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Save Changes</button>
+          <button type="submit" class="btn btn-primary">Post Product</button>
           <a href="farmer-home.html" class="btn btn-outline">Cancel</a>
         </div>
       </form>

@@ -17,11 +17,27 @@
         </div>
       </div>
 
-      <nav class="nav-links">
-        <a href="browse-products.html">Browse Products</a>
-        <a href="my-requests.html">My Requests</a>
-        <a href="login.html">Logout</a>
-      </nav>
+      <div class="header-utilities">
+        <a href="manage-profile.html" class="profile-link" title="Profile">
+          <img src="../assets/images/logo.png" alt="Profile" />
+        </a>
+
+        <div class="menu-wrap">
+          <button class="hamburger-btn" data-target="productDetailsMenu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="dropdown-menu" id="productDetailsMenu">
+            <a href="charity-home.html">Home</a>
+            <a href="manage-profile.html">Edit Profile</a>
+            <a href="browse-products.html">Browse Products</a>
+            <a href="my-requests.html">My Requests</a>
+            <a href="login.html" class="logout-btn">Logout</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -44,7 +60,7 @@
         </div>
 
         <div class="note-box">
-          The “Request” button is clearly visible here to support donation request initiation.
+          The request form below supports donation request submission clearly and directly.
         </div>
 
         <div class="form-actions">
@@ -60,7 +76,7 @@
       <h3>Submit Donation Request</h3>
       <p class="subtext">Enter the requested quantity to submit your request.</p>
 
-      <form>
+      <form id="request-form">
         <div class="form-group">
           <label for="requested-quantity">Requested Quantity</label>
           <input id="requested-quantity" type="number" placeholder="Enter quantity" />

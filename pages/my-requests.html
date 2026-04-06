@@ -17,11 +17,26 @@
         </div>
       </div>
 
-      <nav class="nav-links">
-        <a href="charity-home.html">Charity Home</a>
-        <a href="browse-products.html">Browse Products</a>
-        <a href="login.html">Logout</a>
-      </nav>
+      <div class="header-utilities">
+        <a href="manage-profile.html" class="profile-link" title="Profile">
+          <img src="../assets/images/logo.png" alt="Profile" />
+        </a>
+
+        <div class="menu-wrap">
+          <button class="hamburger-btn" data-target="myRequestsMenu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="dropdown-menu" id="myRequestsMenu">
+            <a href="charity-home.html">Home</a>
+            <a href="manage-profile.html">Edit Profile</a>
+            <a href="browse-products.html">Browse Products</a>
+            <a href="login.html" class="logout-btn">Logout</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
