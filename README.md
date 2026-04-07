@@ -32,12 +32,7 @@ In Saudi Arabia, vast quantities of fresh crops are often wasted due to a lack o
 
 ---
 
-## 🛠️ Tech Stack
-* **Frontend:** HTML5, CSS3 (Fresh Theme), JavaScript (ES6+).
-* **Environment:** Developed and tested using **MAMP** server.
-* **Design Tools:** StarUML (Activity Diagrams), Lucidchart (Site Map).
 
----
 
 ## 📂 Project Structure
 ```text
