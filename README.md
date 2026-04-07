@@ -24,7 +24,7 @@ In Saudi Arabia, vast quantities of fresh crops are often wasted due to a lack o
 ### For Charities:
 * **Browse & Search:** Filter agricultural surplus by category or name.
 * **Submit Requests:** Request specific quantities of available crops.
-* **Track Status:** Real-time tracking of request progress (Pending, Approved, Delivered).
+* **Track Status:** Real-time tracking of request progress (Pending, Approved, rejected).
 
 ### For Administrators:
 * **System Dashboard:** View statistics on users, listings, and donations.
