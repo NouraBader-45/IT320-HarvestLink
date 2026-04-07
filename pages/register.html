@@ -3,108 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HarvestLink | Farmer Home</title>
+  <title>HarvestLink | Register</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body class="farmer-theme">
+<body>
   <header class="main-header">
     <div class="container header-wrap">
       <div class="logo-area">
         <img src="../assets/images/logo.png" alt="HarvestLink Logo" />
         <div class="logo-text">
           <h1>HarvestLink</h1>
-          <p>Farmer Area</p>
+          <p>Create your account</p>
         </div>
       </div>
 
-      <div class="header-utilities">
-        <a href="manage-profile.html" class="profile-link" title="Profile">
-          <img src="../assets/images/logo.png" alt="Profile" />
-        </a>
-
-        <div class="menu-wrap">
-          <button class="hamburger-btn" data-target="farmerMenu" aria-label="Open menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-
-          <div class="dropdown-menu" id="farmerMenu">
-            <a href="farmer-home.html">Home</a>
-            <a href="manage-profile.html">Edit Profile</a>
-            <a href="add-product.html">Add Product</a>
-            <a href="my-products.html">My Products</a>
-            <a href="incoming-requests.html">Incoming Requests</a>
-            <a href="login.html" class="logout-btn">Logout</a>
-          </div>
-        </div>
-      </div>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a class="active" href="register.html">Register</a>
+      </nav>
     </div>
   </header>
 
-  <main class="page-shell">
+  <section class="page-hero">
     <div class="container">
-      <div class="role-top">
-        <div class="role-intro">
-          <span class="role-bubble">Farmer Home</span>
-          <h2>Manage your surplus with clarity and confidence.</h2>
-          <p>
-            This page gives farmers quick access to the most important functions in HarvestLink,
-            including posting products, managing listings, and reviewing incoming requests.
-          </p>
-        </div>
-      </div>
-
-      <div class="role-highlight">
-        <h3>Welcome, Farmer</h3>
-        <p>
-          HarvestLink helps you present your surplus products clearly, receive requests from charitable
-          organizations, and respond to them in an organized digital workflow.
-        </p>
-      </div>
-
-      <section class="cards-section">
-        <div class="feature-card">
-          <div class="feature-tag">Core Function</div>
-          <div class="feature-icon">+</div>
-          <h3>Add Surplus Product</h3>
-          <p>
-            Create a new listing with crop type, quantity, expiration date, and product condition
-            so charities can review it easily.
-          </p>
-          <div class="card-actions">
-            <a href="add-product.html" class="btn btn-primary">Add Product</a>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-tag">Management</div>
-          <div class="feature-icon">≣</div>
-          <h3>My Products</h3>
-          <p>
-            Open your current listings to review them, edit their details, or remove
-            products that are no longer available.
-          </p>
-          <div class="card-actions">
-            <a href="my-products.html" class="btn btn-outline">Open Listings</a>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-tag">Request Handling</div>
-          <div class="feature-icon">✓</div>
-          <h3>Incoming Requests</h3>
-          <p>
-            Review donation requests sent by charitable organizations and respond through
-            approval or rejection.
-          </p>
-          <div class="card-actions">
-            <a href="incoming-requests.html" class="btn btn-primary">Manage Requests</a>
-          </div>
-        </div>
-      </section>
+      <h2>Register</h2>
+      <p>Create an account as a Farmer or a Charitable Organization.</p>
     </div>
-  </main>
+  </section>
+
+  <section>
+    <div class="form-wrap">
+      <h3>Create Account</h3>
+      <p class="subtext">Complete the form below to join HarvestLink.</p>
+
+      <form id="register-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input id="username" type="text" placeholder="Enter username" />
+        </div>
+
+        <div class="form-group">
+          <label for="reg-email">Email Address</label>
+          <input id="reg-email" type="email" placeholder="Enter email address" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reg-password">Password</label>
+            <input id="reg-password" type="password" placeholder="Enter password" />
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input id="confirm-password" type="password" placeholder="Confirm password" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="role">Role Selection</label>
+          <select id="role">
+            <option selected disabled>Select role</option>
+            <option>Farmer</option>
+            <option>Charity</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Create Account</button>
+          <a href="login.html" class="btn btn-outline">Back to Login</a>
+        </div>
+      </form>
+    </div>
+  </section>
 
   <footer class="main-footer">
     <div class="container footer-wrap">

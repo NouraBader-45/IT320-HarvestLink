@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HarvestLink | My Products</title>
+  <title>HarvestLink | Add Product</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -13,7 +13,7 @@
         <img src="../assets/images/logo.png" alt="HarvestLink Logo" />
         <div class="logo-text">
           <h1>HarvestLink</h1>
-          <p>My Product Listings</p>
+          <p>Add Surplus Product</p>
         </div>
       </div>
 
@@ -23,16 +23,16 @@
         </a>
 
         <div class="menu-wrap">
-          <button class="hamburger-btn" data-target="myProductsMenu" aria-label="Open menu">
+          <button class="hamburger-btn" data-target="addProductMenu" aria-label="Open menu">
             <span></span>
             <span></span>
             <span></span>
           </button>
 
-          <div class="dropdown-menu" id="myProductsMenu">
+          <div class="dropdown-menu" id="addProductMenu">
             <a href="farmer-home.html">Home</a>
             <a href="manage-profile.html">Edit Profile</a>
-            <a href="add-product.html">Add Product</a>
+            <a href="my-products.html">My Products</a>
             <a href="incoming-requests.html">Incoming Requests</a>
             <a href="login.html" class="logout-btn">Logout</a>
           </div>
@@ -43,46 +43,53 @@
 
   <section class="page-hero">
     <div class="container">
-      <h2>My Products</h2>
-      <p>Review, edit, or remove your current surplus listings.</p>
+      <h2>Add Surplus Product</h2>
+      <p>Create a new listing with the required product details.</p>
     </div>
   </section>
 
-  <section class="container section">
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="image-box"><img src="../assets/images/logo.png" alt="Product" /></div>
-        <div class="content">
-          <h4>Fresh Tomatoes</h4>
-          <p>Available surplus ready for donation coordination.</p>
-          <div class="meta">
-            <span><strong>Quantity:</strong> 80 Boxes</span>
-            <span><strong>Condition:</strong> Fresh</span>
-            <span><strong>Expiry:</strong> 2026-06-18</span>
-          </div>
-          <div class="action-row">
-            <a href="add-product.html" class="btn btn-outline edit-product-btn">Edit</a>
-            <a href="#" class="btn btn-danger delete-product-btn">Delete</a>
-          </div>
-        </div>
-      </div>
+  <section>
+    <div class="form-wrap">
+      <h3>New Product Listing</h3>
+      <p class="subtext">Provide clear and accurate information for charities to review.</p>
 
-      <div class="product-card">
-        <div class="image-box"><img src="../assets/images/logo.png" alt="Product" /></div>
-        <div class="content">
-          <h4>Dates</h4>
-          <p>Seasonal crop posted for charity review and request submission.</p>
-          <div class="meta">
-            <span><strong>Quantity:</strong> 50 Boxes</span>
-            <span><strong>Condition:</strong> Fresh</span>
-            <span><strong>Expiry:</strong> 2026-07-03</span>
+      <form id="add-product-form">
+        <div class="form-group">
+          <label for="crop-type">Crop Type</label>
+          <input id="crop-type" type="text" placeholder="e.g. Tomatoes, Dates" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input id="quantity" type="number" placeholder="e.g. 120" />
           </div>
-          <div class="action-row">
-            <a href="add-product.html" class="btn btn-outline edit-product-btn">Edit</a>
-            <a href="#" class="btn btn-danger delete-product-btn">Delete</a>
+
+          <div class="form-group">
+            <label for="condition">Product Condition</label>
+            <select id="condition">
+              <option selected disabled>Select condition</option>
+              <option>Fresh</option>
+              <option>Near Expiry</option>
+            </select>
           </div>
         </div>
-      </div>
+
+        <div class="form-group">
+          <label for="expiry">Expiration Date</label>
+          <input id="expiry" type="date" />
+        </div>
+
+        <div class="form-group">
+          <label for="product-image">Product Image</label>
+          <input id="product-image" type="file" />
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Post Product</button>
+          <a href="farmer-home.html" class="btn btn-outline">Cancel</a>
+        </div>
+      </form>
     </div>
   </section>
 

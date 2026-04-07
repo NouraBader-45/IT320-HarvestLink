@@ -3,107 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HarvestLink | Admin Home</title>
+  <title>HarvestLink | Login</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body class="admin-theme">
+<body>
   <header class="main-header">
     <div class="container header-wrap">
       <div class="logo-area">
         <img src="../assets/images/logo.png" alt="HarvestLink Logo" />
         <div class="logo-text">
           <h1>HarvestLink</h1>
-          <p>Administrator Area</p>
+          <p>Login to continue</p>
         </div>
       </div>
 
-      <div class="header-utilities">
-        <a href="manage-profile.html" class="profile-link" title="Profile">
-          <img src="../assets/images/logo.png" alt="Profile" />
-        </a>
-
-        <div class="menu-wrap">
-          <button class="hamburger-btn" data-target="adminMenu" aria-label="Open menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-
-          <div class="dropdown-menu" id="adminMenu">
-            <a href="admin-home.html">Home</a>
-            <a href="manage-profile.html">Edit Profile</a>
-            <a href="manage-users.html">Manage Users</a>
-            <a href="manage-listings.html">Manage Listings</a>
-            <a href="login.html" class="logout-btn">Logout</a>
-          </div>
-        </div>
-      </div>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="active" href="login.html">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </nav>
     </div>
   </header>
 
-  <main class="page-shell">
+  <section class="page-hero">
     <div class="container">
-      <div class="role-top">
-        <div class="role-intro">
-          <span class="role-bubble">Admin Home</span>
-          <h2>Monitor platform activity and protect system integrity.</h2>
-          <p>
-            This page gives administrators a focused interface for the most important management functions
-            without repetition or clutter.
-          </p>
-        </div>
-      </div>
-
-      <div class="role-highlight">
-        <h3>Welcome, Administrator</h3>
-        <p>
-          HarvestLink gives the admin role a clear view of essential management functions
-          to help maintain a reliable and organized platform.
-        </p>
-      </div>
-
-      <section class="cards-section">
-        <div class="feature-card">
-          <div class="feature-tag">Users</div>
-          <div class="feature-icon">U</div>
-          <h3>Manage Users</h3>
-          <p>
-            Review farmer and charity accounts and block inappropriate accounts
-            when moderation is required.
-          </p>
-          <div class="card-actions">
-            <a href="manage-users.html" class="btn btn-primary">Manage Users</a>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-tag">Listings</div>
-          <div class="feature-icon">L</div>
-          <h3>Manage Listings</h3>
-          <p>
-            Review surplus product listings and block unsuitable listings
-            to keep the platform reliable and organized.
-          </p>
-          <div class="card-actions">
-            <a href="manage-listings.html" class="btn btn-primary">Manage Listings</a>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-tag">Overview</div>
-          <div class="feature-icon">#</div>
-          <h3>View Platform Overview</h3>
-          <p>
-            Access a simple summary of users, listings, and requests
-            to support general monitoring of the system.
-          </p>
-          <div class="card-actions">
-            <a href="manage-users.html" class="btn btn-outline">Open Overview</a>
-          </div>
-        </div>
-      </section>
+      <h2>Log In</h2>
+      <p>Enter your credentials to access your HarvestLink account.</p>
     </div>
-  </main>
+  </section>
+
+  <section>
+    <div class="form-wrap">
+      <h3>Welcome Back</h3>
+      <p class="subtext">Use your registered email, password, and role.</p>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" placeholder="example@email.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Enter your password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="login-role">Role</label>
+          <select id="login-role" required>
+            <option value="" selected disabled>Select your role</option>
+            <option value="farmer">Farmer</option>
+            <option value="charity">Charity</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+
+        <div class="note-box">
+          This login page demonstrates front-end role-based navigation.
+          Choose a role, then click Login to open the matching role page.
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Login</button>
+          <a class="btn btn-outline" href="farmer-home.html">Farmer Home</a>
+          <a class="btn btn-outline" href="charity-home.html">Charity Home</a>
+          <a class="btn btn-outline" href="admin-home.html">Admin Home</a>
+        </div>
+      </form>
+    </div>
+  </section>
 
   <footer class="main-footer">
     <div class="container footer-wrap">
