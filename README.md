@@ -1,32 +1,62 @@
-# IT320-HarvestLink
-HarvestLink web platform for IT320
-# HarvestLink
+# HarvestLink — Agricultural Surplus Donation Platform 🌾
 
-HarvestLink is a web-based platform developed for IT320 Practical Software Engineering at King Saud University.
+**HarvestLink** is a digital platform designed to bridge the gap between farmers with surplus crops and charitable organizations in Saudi Arabia. Our mission is to reduce food waste and enhance community support through a streamlined, transparent coordination system.
 
-The system connects farmers who have surplus agricultural products with charitable organizations that need food donations. The platform supports digital coordination only.
+---
 
-## Main Roles
-- Farmer
-- Charitable Organization
-- Administrator
+## 🚀 Project Overview
+In Saudi Arabia, vast quantities of fresh crops are often wasted due to a lack of formal connection between producers and those in need. **HarvestLink** provides a centralized web-based solution to organize these donations efficiently.
 
-## Main Functions
-- Register / Login / Logout
-- Manage Profile
-- Add / Edit / Delete Surplus Products
-- Browse Products
-- View Product Details
-- Submit Donation Request
-- View and Respond to Requests
-- Track Request Status
-- Block User Account
-- Block Product Listing
+### Key Stakeholders:
+* **Farmers:** List surplus products and manage donation requests.
+* **Charities:** Browse available surplus and submit donation requests.
+* **Administrators:** Monitor system activity and ensure platform integrity.
 
-## Technologies Used
-- HTML
-- CSS
-- JavaScript
+---
 
-## Notes
-This version focuses on front-end implementation and interface structure.
+## ✨ Main Features
+
+### For Farmers:
+* **List Surplus:** Add products with details (type, quantity, expiry, condition).
+* **Manage Requests:** View incoming requests from charities and **Approve/Reject** them.
+* **Profile Management:** Update farm details and contact information.
+
+### For Charities:
+* **Browse & Search:** Filter agricultural surplus by category or name.
+* **Submit Requests:** Request specific quantities of available crops.
+* **Track Status:** Real-time tracking of request progress (Pending, Approved, Delivered).
+
+### For Administrators:
+* **System Dashboard:** View statistics on users, listings, and donations.
+* **Content Moderation:** Ability to **Block/Unblock** inappropriate listings or users.
+
+---
+
+## 🛠️ Tech Stack
+* **Frontend:** HTML5, CSS3 (Fresh Theme), JavaScript (ES6+).
+* **Environment:** Developed and tested using **MAMP** server.
+* **Design Tools:** StarUML (Activity Diagrams), Lucidchart (Site Map).
+
+---
+
+## 📂 Project Structure
+```text
+IT320-HarvestLink/
+├── css/                # Stylesheets (Theme & Layout)
+├── images/             # Product and UI icons
+├── js/                 # Logic for validation and interaction
+├── includes/           # Reusable components
+├── index.html          # Homepage
+├── login.html          # Authentication page
+└── README.md           # Project documentation
+👥 The Scrum Team
+Noura Bader Alotaibi (Product Owner & Developer) - ID: 445200354
+
+Remas Eid Almutairi (Developer)
+
+Noor Hamoud Alghuwairy (Developer)
+
+Aisha Fahad Aloinzy (Developer)
+
+📝 License
+This project was developed as part of the IT320 Practical Software Engineering course at King Saud University (2026).
