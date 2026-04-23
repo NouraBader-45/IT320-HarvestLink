@@ -1,57 +1,55 @@
 # HarvestLink — Agricultural Surplus Donation Platform 🌾
+HarvestLink is a role-based web platform that connects farmers with surplus agricultural products to charitable organizations that need them.
 
-**HarvestLink** is a digital platform designed to bridge the gap between farmers with surplus crops and charitable organizations in Saudi Arabia. Our mission is to reduce food waste and enhance community support through a streamlined, transparent coordination system.
+## Roles
+- **Farmer**: register/login, manage profile, add/edit/delete products, review incoming requests (approve/reject)
+- **Charity**: register/login, manage profile, browse/search listings, submit requests, track request status
+- **Admin**: login, dashboard statistics, block/unblock users and product listings
 
----
+## Scope Preserved
+This implementation is aligned with the approved project logic:
+- client-server architecture
+- no payment, delivery/logistics, storage, or third-party service modules
+- direct registration for Farmer and Charity only
+- Admin is not publicly registerable
+- role-based login redirects
+- profile data stored in `users` table (with default profile image fallback)
 
-## 🚀 Project Overview
-In Saudi Arabia, vast quantities of fresh crops are often wasted due to a lack of formal connection between producers and those in need. **HarvestLink** provides a centralized web-based solution to organize these donations efficiently.
+## Tech Stack
+- Front-end: HTML/CSS/Vanilla JS
+- Back-end: Node.js + Express
+- Database: SQLite (`better-sqlite3`)
+- Auth: Session-based auth + `bcryptjs` password hashing
+- Uploads: `multer` for profile/product images
 
-### Key Stakeholders:
-* **Farmers:** List surplus products and manage donation requests.
-* **Charities:** Browse available surplus and submit donation requests.
-* **Administrators:** Monitor system activity and ensure platform integrity.
+## Run Locally
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Initialize database:
+   ```bash
+   npm run init-db
+   ```
+3. Start server:
+   ```bash
+   npm start
+   ```
+4. Open:
+   - `http://localhost:3000`
 
----
+## Default Admin Account
+- Email: `admin@harvestlink.local`
+- Password: `Admin@123`
 
-## ✨ Main Features
+## Database Files
+- Schema: `db/schema.sql`
+- Runtime DB: `db/harvestlink.db` (created after initialization)
 
-### For Farmers:
-* **List Surplus:** Add products with details (type, quantity, expiry, condition).
-* **Manage Requests:** View incoming requests from charities and **Approve/Reject** them.
-* **Profile Management:** Update farm details and contact information.
-
-### For Charities:
-* **Browse & Search:** Filter agricultural surplus by category or name.
-* **Submit Requests:** Request specific quantities of available crops.
-* **Track Status:** Real-time tracking of request progress (Pending, Approved, rejected).
-
-### For Administrators:
-* **System Dashboard:** View statistics on users, listings, and donations.
-* **Content Moderation:** Ability to **Block/Unblock** inappropriate listings or users.
-
----
-
-
-
-## 📂 Project Structure
-```text
-IT320-HarvestLink/
-├── css/                # Stylesheets (Theme & Layout)
-├── images/             # Product and UI icons
-├── js/                 # Logic for validation and interaction
-├── includes/           # Reusable components
-├── index.html          # Homepage
-├── login.html          # Authentication page
-└── README.md           # Project documentation
-👥 The Scrum Team
-Noura Bader Alotaibi (Product Owner & Developer) - ID: 445200354
-
-Remas Eid Almutairi (Developer)
-
-Noor Hamoud Alghuwairy (Developer)
-
-Aisha Fahad Aloinzy (Developer)
-
-📝 License
-This project was developed as part of the IT320 Practical Software Engineering course at King Saud University (2026).
+## Main API Areas
+- `/api/auth` (register/login/logout/session)
+- `/api/profile` (read/update profile + image upload)
+- `/api/products` (listing CRUD and browse)
+- `/api/requests` (submit/track/respond)
+- `/api/notifications` (role notifications)
+- `/api/admin` (stats, moderation)
