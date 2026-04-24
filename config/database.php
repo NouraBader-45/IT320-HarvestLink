@@ -3,7 +3,7 @@
 // عدليها فقط إذا تغيّر البورت أو اسم القاعدة
 
 const DB_HOST = 'localhost';
-const DB_PORT = '3336';
+const DB_PORT = '3306';
 const DB_NAME = 'harvestlink_db';
 const DB_USER = 'root';
 const DB_PASS = 'root';

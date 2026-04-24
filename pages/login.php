@@ -2,34 +2,36 @@
 require_once __DIR__ . '/../includes/auth.php';
 
 $error = '';
+$success = '';
+
+if (isset($_GET['registered'])) {
+    $success = 'Account created successfully. Please log in.';
+}
+
+if (isset($_GET['logged_out'])) {
+    $success = 'You have been logged out successfully.';
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
 
-    // هنا نجيب المستخدم حسب الإيميل
-    $stmt = db()->prepare('SELECT * FROM users WHERE email = ? LIMIT 1');
-    $stmt->bind_param('s', $email);
-    $stmt->execute();
-    $user = $stmt->get_result()->fetch_assoc();
-
-    // إذا المستخدم مو موجود أو كلمة المرور غلط نطلع رسالة واضحة
-    if (!$user || !password_verify($password, $user['password_hash'])) {
-        $error = 'Invalid email or password.';
-    } elseif ($user['account_status'] === 'blocked') {
-        $error = 'Your account is blocked. Please contact the administrator.';
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = 'Please enter a valid email address.';
     } else {
-        login_user($user);
+        $stmt = db()->prepare('SELECT * FROM users WHERE email = ? LIMIT 1');
+        $stmt->bind_param('s', $email);
+        $stmt->execute();
+        $user = $stmt->get_result()->fetch_assoc();
 
-        // بعد تسجيل الدخول نوجه المستخدم حسب الرول
-        if ($user['role'] === 'farmer') {
-            header('Location: farmer-home.php');
-        } elseif ($user['role'] === 'charity') {
-            header('Location: charity-home.php');
+        if (!$user || !password_verify($password, $user['password_hash'])) {
+            $error = 'Invalid email or password.';
+        } elseif ($user['account_status'] === 'blocked') {
+            $error = 'Your account is blocked. Please contact the administrator.';
         } else {
-            header('Location: admin-home.php');
+            login_user($user);
+            redirect_by_role($user['role']);
         }
-        exit;
     }
 }
 ?>
@@ -78,6 +80,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
       <?php endif; ?>
 
+      <?php if ($success): ?>
+        <div class="note-box" style="border-left-color:#2f7a4f; color:#2f7a4f;">
+          <?php echo htmlspecialchars($success); ?>
+        </div>
+      <?php endif; ?>
+
       <form method="POST">
         <div class="form-group">
           <label for="email">Email Address</label>
@@ -100,10 +108,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <footer class="main-footer">
     <div class="container footer-wrap">
       <p>HarvestLink Web Platform</p>
-      <p>IT320 Practical Software Engineering — <span class="current-year"></span></p>
+      <p>IT320 Practical Software Engineering</p>
     </div>
   </footer>
-
-  <script src="../js/main.js"></script>
 </body>
 </html>
