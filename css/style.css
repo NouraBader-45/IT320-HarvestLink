@@ -992,3 +992,30 @@ th {
     max-width: 100%;
   }
 }
+/* تنسيق الحاوية الخاصة بصورة المنتج */
+.product-img-wrap {
+    width: 100%;
+    height: 160px; /* ارتفاع ثابت لتوحيد شكل الكروت */
+    overflow: hidden;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px 12px 0 0; /* زوايا علوية دائرية */
+}
+
+/* تنسيق الصورة نفسها لمنع النحف أو التمطيط */
+.p-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* أهم خاصية: تقص الصورة لتناسب المربع بدون تمطيط */
+    display: block;
+}
+
+/* تحسين شكل الكارد بشكل عام */
+.product-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
