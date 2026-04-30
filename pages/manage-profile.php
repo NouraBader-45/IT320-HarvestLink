@@ -6,6 +6,9 @@ $user = current_user();
 
 $error = '';
 $success = '';
+if (isset($_GET['updated'])) {
+    $success = 'Profile updated successfully.';
+}
 
 $role = $user['role'];
 
@@ -65,10 +68,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($error === '') {
                 $stmt = db()->prepare('UPDATE users SET full_name = ?, email = ?, phone_number = ?, profile_image = ?, updated_at = NOW() WHERE user_id = ?');
                 $stmt->bind_param('ssssi', $full_name, $email, $phone_number, $profileImagePath, $user['user_id']);
-                $stmt->execute();
-
-                $success = 'Profile updated successfully.';
-                $user = current_user();
+                if ($stmt->execute()) {
+    header('Location: manage-profile.php?updated=1');
+    exit;
+} else {
+    $error = 'Failed to update profile. Please try again.';
+}
             }
         }
     }
@@ -172,9 +177,8 @@ $profileImage = get_profile_image($user);
 
         <div class="form-group">
           <label>Current Profile Image</label>
-          <img src="<?php echo htmlspecialchars($profileImage); ?>" alt="Current Profile"
-               style="width:120px;height:120px;border-radius:50%;object-fit:cover;" />
-        </div>
+          <img src="<?php echo htmlspecialchars($profileImage); ?>?t=<?php echo time(); ?>" alt="Current Profile"
+     style="width:120px;height:120px;border-radius:50%;object-fit:cover;" /> </div>
 
         <div class="form-actions">
           <button type="submit" class="btn btn-primary">Save Changes</button>

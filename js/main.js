@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   bindLoginRedirect();
   bindFormToast("register-form", "Account created successfully.");
-  bindFormToast("profile-form", "Profile updated successfully.");
   bindFormToast("add-product-form", "Product added successfully.");
   bindFormToast("request-form", "Request submitted successfully.");
   bindFormToast("search-form", null, true);
