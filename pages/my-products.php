@@ -81,7 +81,7 @@ $products = $listStmt->get_result();
         <div class="product-card">
           <div class="image-box">
             <img src="<?php echo !empty($row['image']) ? '../' . htmlspecialchars($row['image']) : '../assets/images/logo.png'; ?>" alt="Product" />
-          </div>
+    </div>
           <div class="content">
             <h4><?php echo htmlspecialchars($row['crop_type']); ?></h4>
             <div class="meta">

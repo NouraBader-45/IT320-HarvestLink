@@ -13,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $confirmPassword = $_POST['confirm_password'] ?? '';
     $role = $_POST['role'] ?? '';
 
-    // هنا نطبق منطق الباكلوق: الاسم مطلوب، الإيميل صحيح، الباسورد 8 أحرف، والرول Farmer أو Charity فقط.
     if (strlen($fullName) < 4 || strlen($fullName) > 100) {
         $error = 'Full name must be between 4 and 100 characters.';
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -40,7 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($insertUserStmt->execute()) {
                 $userId = db()->insert_id;
 
-                // إذا كان Farmer ندخله في farmers، وإذا Charity ندخله في charitable_organizations.
                 if ($role === 'farmer') {
                     $insertFarmerStmt = db()->prepare('INSERT INTO farmers (user_id) VALUES (?)');
                     $insertFarmerStmt->bind_param('i', $userId);
@@ -149,10 +147,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <footer class="main-footer">
     <div class="container footer-wrap">
       <p>HarvestLink Web Platform</p>
-      <p>IT320 Practical Software Engineering — <span class="current-year"></span></p>
+      <p>IT320 Practical Software Engineering</p>
     </div>
   </footer>
-
-  <script src="../js/main.js"></script>
 </body>
 </html>
