@@ -81,17 +81,7 @@ $user = current_user();
           </div>
         </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">i</div>
-          <h3>View Product Details</h3>
-          <p>
-            Open full product information such as farmer name, quantity, condition,
-            and expiration date before submitting a request.
-          </p>
-          <div class="card-actions">
-            <a href="browse-products.php" class="btn btn-outline">Open Products</a>
-          </div>
-        </div>
+       
 
         <div class="feature-card">
           <div class="feature-icon">↗</div>
