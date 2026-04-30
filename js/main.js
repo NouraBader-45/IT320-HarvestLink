@@ -141,7 +141,7 @@ function bindActionMessages() {
     { selector: ".unblock-user-btn", message: "User unblocked successfully.", type: "success" },
     { selector: ".block-product-btn", message: "Product blocked successfully.", type: "warning" },
     { selector: ".unblock-product-btn", message: "Product unblocked successfully.", type: "success" },
-   { selector: ".logout-btn", message: "Logged out successfully.", type: "success", redirect: "login.php" }
+   { selector: ".logout-btn", message: "Logged out successfully.", type: "success", redirect: "logout.php" }
   ];
 
   actionMap.forEach((item) => {
