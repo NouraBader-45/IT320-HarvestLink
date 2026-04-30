@@ -88,8 +88,12 @@ $products = $listStmt->get_result();
               <span><strong>Quantity:</strong> <?php echo htmlspecialchars($row['quantity']); ?></span>
               <span><strong>Condition:</strong> <?php echo htmlspecialchars($row['product_condition']); ?></span>
               <span><strong>Expiry:</strong> <?php echo htmlspecialchars($row['expiration_date']); ?></span>
-              <span><strong>Status:</strong> <?php echo htmlspecialchars($row['product_status']); ?></span>
-            </div>
+<span>
+  <strong>Status:</strong>
+  <span class="<?php echo $row['product_status'] === 'Blocked' ? 'status-blocked' : 'status-available'; ?>">
+    <?php echo htmlspecialchars($row['product_status']); ?>
+  </span>
+</span>
             <div class="action-row">
               <a href="my-products.php?delete=<?php echo (int) $row['product_id']; ?>" class="btn btn-danger">Delete</a>
             </div>
