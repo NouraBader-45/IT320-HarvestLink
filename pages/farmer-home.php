@@ -42,7 +42,10 @@ $user = current_user();
             <a href="add-product.php">Add Product</a>
             <a href="my-products.php">My Products</a>
             <a href="incoming-requests.php">Incoming Requests</a>
-           <a href="logout.php" class="logout-btn">Logout</a>
+           <a href="logout.php" class="logout-btn"
+   onclick="return confirm('Are you sure you want to log out?');">
+   Logout
+</a>
         </div>
       </div>
     </div>

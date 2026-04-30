@@ -40,7 +40,10 @@ $requestsCount = db()->query("SELECT COUNT(*) AS total FROM donation_requests")-
             <a href="manage-profile.php">Edit Profile</a>
             <a href="manage-users.php">Manage Users</a>
             <a href="manage-listings.php">Manage Listings</a>
-            <a href="logout.php" class="logout-btn">Logout</a>
+           <a href="logout.php" class="logout-btn"
+   onclick="return confirm('Are you sure you want to log out?');">
+   Logout
+</a>
           </div>
         </div>
       </div>

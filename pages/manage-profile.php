@@ -112,7 +112,10 @@ $profileImage = get_profile_image($user);
           <div class="dropdown-menu" id="profileMenu">
             <a href="<?php echo $homePage; ?>">Home</a>
             <a href="manage-profile.php">Edit Profile</a>
-            <a href="logout.php" class="logout-btn">Logout</a>
+           <a href="logout.php" class="logout-btn"
+   onclick="return confirm('Are you sure you want to log out?');">
+   Logout
+</a>
           </div>
         </div>
       </div>

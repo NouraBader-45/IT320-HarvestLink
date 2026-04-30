@@ -41,7 +41,10 @@ $user = current_user();
             <a href="manage-profile.php">Edit Profile</a>
             <a href="browse-products.php">Browse Products</a>
             <a href="my-requests.php">My Requests</a>
-            <a href="logout.php" class="logout-btn">Logout</a>
+            <a href="logout.php" class="logout-btn"
+   onclick="return confirm('Are you sure you want to log out?');">
+   Logout
+</a>
           </div>
         </div>
       </div>

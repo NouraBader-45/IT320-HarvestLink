@@ -115,7 +115,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <a href="farmer-home.php">Home</a>
       <a href="add-product.php">Add Product</a>
       <a href="my-products.php" class="active">My Products</a>
-      <a href="logout.php" class="logout-btn">Logout</a>
+      <a href="logout.php" class="logout-btn"
+   onclick="return confirm('Are you sure you want to log out?');">
+   Logout
+</a>
     </nav>
   </div>
 </header>

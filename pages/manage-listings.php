@@ -50,7 +50,10 @@ $listings = db()->query("SELECT p.*, u.full_name AS farmer_name
         <a href="admin-home.php">Home</a>
         <a href="manage-users.php">Manage Users</a>
         <a class="active" href="manage-listings.php">Manage Listings</a>
-        <a href="logout.php" class="logout-btn">Logout</a>
+        <a href="logout.php" class="logout-btn"
+   onclick="return confirm('Are you sure you want to log out?');">
+   Logout
+</a>
       </nav>
     </div>
   </header>

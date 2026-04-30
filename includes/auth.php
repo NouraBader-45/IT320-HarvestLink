@@ -3,13 +3,14 @@ require_once __DIR__ . '/../config/database.php';
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
-    function prevent_cache(): void
+}
+
+function prevent_cache(): void
 {
     header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
     header("Cache-Control: post-check=0, pre-check=0", false);
     header("Pragma: no-cache");
     header("Expires: 0");
-}
 }
 
 
@@ -87,13 +88,13 @@ function redirect_by_role(string $role): void
 function get_profile_image(?array $user): string
 {
     if (!$user) {
-        return '../assets/images/default-profile.png';
+        return '../uploads/profiles/default_profile.png';
     }
 
     $image = trim((string) ($user['profile_image'] ?? ''));
 
     if ($image === '') {
-        return '../assets/images/default-profile.png';
+        return '../uploads/profiles/default_profile.png';
     }
 
     return '../' . ltrim($image, '/');
