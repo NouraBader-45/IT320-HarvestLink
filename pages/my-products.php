@@ -95,9 +95,15 @@ $products = $listStmt->get_result();
   </span>
 </span>
       </div>
-            <div class="action-row">
-              <a href="my-products.php?delete=<?php echo (int) $row['product_id']; ?>" class="btn btn-danger">Delete</a>
-            </div>
+           <div class="action-row">
+  <a href="edit-product.php?id=<?php echo (int) $row['product_id']; ?>" class="btn">Edit</a>
+
+  <a href="my-products.php?delete=<?php echo (int) $row['product_id']; ?>" 
+     class="btn btn-danger"
+     onclick="return confirm('Are you sure you want to delete this product?');">
+     Delete
+  </a>
+</div>
           </div>
         </div>
       <?php endwhile; ?>
