@@ -3,9 +3,16 @@ require_once __DIR__ . '/../config/database.php';
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
+    function prevent_cache(): void
+{
+    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    header("Cache-Control: post-check=0, pre-check=0", false);
+    header("Pragma: no-cache");
+    header("Expires: 0");
+}
 }
 
-// نجيب المستخدم الحالي
+
 function current_user()
 {
     if (!isset($_SESSION['user_id'])) {
@@ -47,6 +54,8 @@ function logout_user(): void
 
 function require_login(): void
 {
+    prevent_cache();
+
     if (!isset($_SESSION['user_id'])) {
         header('Location: login.php');
         exit;

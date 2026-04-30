@@ -472,13 +472,6 @@ th {
 }
 
 
-.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
-}
-
-
-.product-card img,
 .feature-card img,
 .product-image {
   width: 100%;
@@ -487,6 +480,9 @@ th {
   display: block;
   border-radius: 18px 18px 0 0;
 }
+
+
+
 .meta {
   display: grid;
   gap: 6px;
@@ -968,18 +964,7 @@ th {
     max-width: 100%;
   }
 }
-.image-box img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important; /* هذه تضمن أن الصورة لا تكون نحيفة وتملأ المربع */
-    display: block !important;
-    transition: transform 0.4s ease; /* إضافة حركة ناعمة عند التمرير */
-}
 
-/* حركة اختيارية: الصورة تكبر قليلاً عند وضع الماوس على الكارد */
-.product-card:hover .image-box img {
-    transform: scale(1.08);
-}
 .status-blocked {
   color: #b94a48 !important;
   font-weight: 800 !important;
