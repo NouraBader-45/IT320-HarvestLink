@@ -94,6 +94,7 @@ $products = $listStmt->get_result();
     <?php echo htmlspecialchars($row['product_status']); ?>
   </span>
 </span>
+      </div>
             <div class="action-row">
               <a href="my-products.php?delete=<?php echo (int) $row['product_id']; ?>" class="btn btn-danger">Delete</a>
             </div>
