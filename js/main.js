@@ -98,12 +98,12 @@ function bindLoginRedirect() {
 
     setTimeout(() => {
       if (role === "farmer") {
-        window.location.href = "farmer-home.html";
-      } else if (role === "charity") {
-        window.location.href = "charity-home.html";
-      } else if (role === "admin") {
-        window.location.href = "admin-home.html";
-      }
+    window.location.href = "farmer-home.php";
+} else if (role === "charity") {
+    window.location.href = "charity-home.php";
+} else if (role === "admin") {
+    window.location.href = "admin-home.php";
+}
     }, 450);
   });
 }
@@ -141,7 +141,7 @@ function bindActionMessages() {
     { selector: ".unblock-user-btn", message: "User unblocked successfully.", type: "success" },
     { selector: ".block-product-btn", message: "Product blocked successfully.", type: "warning" },
     { selector: ".unblock-product-btn", message: "Product unblocked successfully.", type: "success" },
-    { selector: ".logout-btn", message: "Logged out successfully.", type: "success", redirect: "login.html" }
+   { selector: ".logout-btn", message: "Logged out successfully.", type: "success", redirect: "login.php" }
   ];
 
   actionMap.forEach((item) => {

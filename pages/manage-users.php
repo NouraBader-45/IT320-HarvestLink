@@ -46,7 +46,7 @@ $users = db()->query("SELECT * FROM users ORDER BY created_at DESC");
         <a href="admin-home.php">Home</a>
         <a class="active" href="manage-users.php">Manage Users</a>
         <a href="manage-listings.php">Manage Listings</a>
-        <a href="logout.php">Logout</a>
+        <a href="logout.php" class="logout-btn">Logout</a>
       </nav>
     </div>
   </header>

@@ -78,7 +78,7 @@ $requests = $stmt->get_result();
         <a href="farmer-home.php">Home</a>
         <a href="my-products.php">My Products</a>
         <a class="active" href="incoming-requests.php">Incoming Requests</a>
-        <a href="logout.php">Logout</a>
+        <a href="logout.php" class="logout-btn">Logout</a>
       </nav>
     </div>
   </header>

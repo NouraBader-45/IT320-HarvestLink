@@ -47,7 +47,7 @@ if ($search !== '') {
         <a href="charity-home.php">Home</a>
         <a class="active" href="browse-products.php">Browse Products</a>
         <a href="my-requests.php">My Requests</a>
-        <a href="logout.php">Logout</a>
+        <a href="logout.php" class="logout-btn">Logout</a>
       </nav>
     </div>
   </header>
